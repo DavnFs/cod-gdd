@@ -4,7 +4,7 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Wikipedia GDD",
+  title: "Wikigames GDD",
   description: "A Wikipedia-style Game Design Document",
     generator: 'v0.dev'
 }

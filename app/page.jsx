@@ -37,8 +37,8 @@ export default function WikipediaPage() {
                 className="mr-2"
               />
               <div>
-                <div className="text-xl font-serif tracking-wide">WIKIPEDIA</div>
-                <div className="text-xs text-gray-500">The Free Encyclopedia</div>
+                <div className="text-xl font-serif tracking-wide">Wiki Games</div>
+                <div className="text-xs text-gray-500">Gamers Encyclopedia</div>
               </div>
             </Link>
           </div>
