@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Sidebar from "@/components/sidebar";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -125,7 +126,7 @@ export default function RootLayout({ children }) {
           </div>
 
           {/* Page Content */}
-          <div className="flex-1 py-4">{children}</div>
+          <div className="flex-1 py-4">{children}<Analytics /></div>
         </main>
       </body>
     </html>
