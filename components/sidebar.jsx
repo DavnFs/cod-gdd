@@ -1,153 +1,429 @@
-import { ChevronDown, ChevronRight } from "lucide-react"
-import Link from "next/link"
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+const getContents = (pathname) => {
+  const handleScroll = (e, sectionId) => {
+    e.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  if (pathname === "/") {
+    return (
+      <ul className="space-y-2 text-sm">
+        <li>
+          <Link
+            href="/#executive-summary"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "executive-summary")}
+          >
+            1 Executive Summary
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/#gameplay"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "gameplay")}
+          >
+            2 Gameplay
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/#story"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "story")}
+          >
+            3 Story
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/#development"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "development")}
+          >
+            4 Development
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/#reception"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "reception")}
+          >
+            5 Reception
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/#awards"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "awards")}
+          >
+            6 Awards
+          </Link>
+        </li>
+        <li>
+        <Link href="/soundtrack" className="text-blue-600 hover:underline">
+            7 soundtrack
+          </Link>
+        </li>
+        <li>
+        <Link href="/characters" className="text-blue-600 hover:underline">
+            8 character
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/#references"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "references")}
+          >
+            9 References
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/#external-links"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "external-links")}
+          >
+            10 External Links
+          </Link>
+        </li>
+      </ul>
+    );
+  } else if (pathname === "/characters") {
+    return (
+      <ul className="space-y-2 text-sm">
+        <li>
+          <Link href="/" className="text-blue-600 hover:underline">
+            ← Back to Main Page
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/characters#overview"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "overview")}
+          >
+            1 Overview
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/characters#main-characters"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "main-characters")}
+          >
+            2 Main Characters
+          </Link>
+        </li>
+      </ul>
+    );
+  } else if (pathname.startsWith("/characters/")) {
+    return (
+      <ul className="space-y-2 text-sm">
+        <li>
+          <Link href="/characters" className="text-blue-600 hover:underline">
+            ← Back to Characters
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/characters/imran-zakhaev#imran-zakhaev"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "imran-zakhaev")}
+          >
+            1 Imran Zakhaev
+          </Link>
+          <ul className="ml-4 space-y-1 text-sm">
+            <li>
+              <Link
+                href="/characters/imran-zakhaev#role-in-the-story"
+                className="text-blue-600 hover:underline"
+                onClick={(e) => handleScroll(e, "role-in-the-story")}
+              >
+                1.1 Role in the Story
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/characters/imran-zakhaev#character-details"
+                className="text-blue-600 hover:underline"
+                onClick={(e) => handleScroll(e, "character-details")}
+              >
+                1.2 Character Details
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/characters/imran-zakhaev#biography"
+                className="text-blue-600 hover:underline"
+                onClick={(e) => handleScroll(e, "biography")}
+              >
+                1.3 Biography
+              </Link>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <Link
+            href="/characters/captain-price#captain-price"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "captain-price")}
+          >
+            2 Captain John Price
+          </Link>
+          <ul className="ml-4 space-y-1 text-sm">
+            <li>
+              <Link
+                href="/characters/captain-price#character-details"
+                className="text-blue-600 hover:underline"
+                onClick={(e) => handleScroll(e, "character-details")}
+              >
+                2.1 Character Details
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/characters/captain-price#biography"
+                className="text-blue-600 hover:underline"
+                onClick={(e) => handleScroll(e, "biography")}
+              >
+                2.2 Biography
+              </Link>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <Link
+            href="/characters/soap-mactavish#soap-mactavish"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "soap-mactavish")}
+          >
+            3 John "Soap" MacTavish
+          </Link>
+          <ul className="ml-4 space-y-1 text-sm">
+            <li>
+              <Link
+                href="/characters/soap-mactavish#character-details"
+                className="text-blue-600 hover:underline"
+                onClick={(e) => handleScroll(e, "character-details")}
+              >
+                3.1 Character Details
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/characters/soap-mactavish#biography"
+                className="text-blue-600 hover:underline"
+                onClick={(e) => handleScroll(e, "biography")}
+              >
+                3.2 Biography
+              </Link>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <Link
+            href="/characters/khaled-al-asad#khaled-al-asad"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "khaled-al-asad")}
+          >
+            4 Khaled Al-Asad
+          </Link>
+          <ul className="ml-4 space-y-1 text-sm">
+            <li>
+              <Link
+                href="/characters/khaled-al-asad#character-details"
+                className="text-blue-600 hover:underline"
+                onClick={(e) => handleScroll(e, "character-details")}
+              >
+                4.1 Character Details
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/characters/khaled-al-asad#biography"
+                className="text-blue-600 hover:underline"
+                onClick={(e) => handleScroll(e, "biography")}
+              >
+                4.2 Biography
+              </Link>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <Link
+            href="/characters/victor-zakhaev#victor-zakhaev"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "victor-zakhaev")}
+          >
+            5 Victor Zakhaev
+          </Link>
+          <ul className="ml-4 space-y-1 text-sm">
+            <li>
+              <Link
+                href="/characters/victor-zakhaev#character-details"
+                className="text-blue-600 hover:underline"
+                onClick={(e) => handleScroll(e, "character-details")}
+              >
+                5.1 Character Details
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/characters/victor-zakhaev#biography"
+                className="text-blue-600 hover:underline"
+                onClick={(e) => handleScroll(e, "biography")}
+              >
+                5.2 Biography
+              </Link>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    );
+  } else if (pathname === "/gameplay") {
+    return (
+      <ul className="space-y-2 text-sm">
+        <li>
+          <Link href="/" className="text-blue-600 hover:underline">
+            ← Back to Main Page
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/gameplay#overview"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "overview")}
+          >
+            1 Overview
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/gameplay#single-player"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "single-player")}
+          >
+            2 Single-Player Campaign
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/gameplay#multiplayer"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "multiplayer")}
+          >
+            3 Multiplayer Mode
+          </Link>
+        </li>
+      </ul>
+    );
+  } else if (pathname === "/story-outline") {
+    return (
+      <ul className="space-y-2 text-sm">
+        <li>
+          <Link href="/" className="text-blue-600 hover:underline">
+            ← Back to Main Page
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/story-outline#overview"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "overview")}
+          >
+            1 Overview
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/story-outline#key-events"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "key-events")}
+          >
+            2 Key Events
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/story-outline#themes"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "themes")}
+          >
+            3 Themes
+          </Link>
+        </li>
+      </ul>
+    );
+  } else if (pathname === "/soundtrack") {
+    return (
+      <ul className="space-y-2 text-sm">
+        <li>
+          <Link href="/" className="text-blue-600 hover:underline">
+            ← Back to Main Page
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/soundtrack#overview"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "overview")}
+          >
+            1 Overview
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/soundtrack#composers"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "composers")}
+          >
+            2 Composers
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/soundtrack#track-list"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "track-list")}
+          >
+            3 Track List
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/soundtrack#sound-effects"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "sound-effects")}
+          >
+            4 Sound Effects
+          </Link>
+        </li>
+      </ul>
+    );
+  }
+  return null;
+};
 
 export default function Sidebar() {
-  return (
-    <div className="py-4">
-     <div className="mb-6">
-  <div className="flex items-center mb-2">
-    <ChevronDown className="w-4 h-4 mr-1" />
-    <h3 className="font-medium text-sm">Contents</h3>
-  </div>
-  <ul className="pl-4 text-sm space-y-2">
-    <li className="flex justify-between">
-      <Link href="#" className="text-blue-600 hover:underline">
-        Campaign
-      </Link>
-      <ChevronRight className="w-4 h-4" />
-    </li>
-    <li className="flex justify-between">
-      <Link href="#" className="text-blue-600 hover:underline">
-        Multiplayer
-      </Link>
-      <ChevronRight className="w-4 h-4" />
-    </li>
-    <li className="flex justify-between">
-      <Link href="#" className="text-blue-600 hover:underline">
-        Weapons
-      </Link>
-      <ChevronRight className="w-4 h-4" />
-    </li>
-    <li className="flex justify-between">
-      <Link href="#" className="text-blue-600 hover:underline">
-        Maps
-      </Link>
-      <ChevronRight className="w-4 h-4" />
-    </li>
-    <li>
-      <Link href="#" className="text-blue-600 hover:underline">
-        Development
-      </Link>
-    </li>
-  </ul>
-  </div>
-      <div className="mb-6">
-        <div className="flex items-center mb-2">
-          <ChevronDown className="w-4 h-4 mr-1" />
-          <h3 className="font-medium text-sm">Top-level articles</h3>
-        </div>
-        <ul className="pl-4 text-sm space-y-2">
-          <li className="flex justify-between">
-            <Link href="#" className="text-blue-600 hover:underline">
-              Felis Cameora species
-            </Link>
-            <ChevronDown className="w-4 h-4" />
-          </li>
-          <li className="flex justify-between">
-            <Link href="#" className="text-blue-600 hover:underline">
-              Cats
-            </Link>
-            <ChevronDown className="w-4 h-4" />
-          </li>
-          <li className="flex justify-between">
-            <Link href="#" className="text-blue-600 hover:underline">
-              Breeds
-            </Link>
-            <ChevronDown className="w-4 h-4" />
-          </li>
-          <li className="pl-4">
-            <Link href="#" className="text-blue-600 hover:underline">
-              American curl
-            </Link>
-          </li>
-          <li className="pl-4">
-            <Link href="#" className="text-blue-600 hover:underline">
-              Sphynx
-            </Link>
-          </li>
-          <li className="pl-4">
-            <Link href="#" className="text-blue-600 hover:underline">
-              German Rex
-            </Link>
-          </li>
-        </ul>
-      </div>
+  const pathname = usePathname();
 
-      <div className="mb-6">
-        <div className="flex items-center mb-2">
-          <ChevronDown className="w-4 h-4 mr-1" />
-          <h3 className="font-medium text-sm">Tools</h3>
-        </div>
-        <ul className="pl-4 text-sm space-y-2">
-          <li className="flex items-center">
-            <svg className="w-4 h-4 mr-2" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-              <path
-                fillRule="evenodd"
-                d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
-                clipRule="evenodd"
-              />
-            </svg>
-            <Link href="#" className="text-blue-600 hover:underline">
-              Watch changes
-            </Link>
-          </li>
-          <li className="flex items-center">
-            <svg className="w-4 h-4 mr-2" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z" />
-            </svg>
-            <Link href="#" className="text-blue-600 hover:underline">
-              Related pages
-            </Link>
-          </li>
-          <li className="flex items-center">
-            <svg className="w-4 h-4 mr-2" viewBox="0 0 20 20" fill="currentColor">
-              <path
-                fillRule="evenodd"
-                d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z"
-                clipRule="evenodd"
-              />
-            </svg>
-            <Link href="#" className="text-blue-600 hover:underline">
-              Permanent link
-            </Link>
-          </li>
-          <li className="flex items-center">
-            <svg className="w-4 h-4 mr-2" viewBox="0 0 20 20" fill="currentColor">
-              <path
-                fillRule="evenodd"
-                d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
-                clipRule="evenodd"
-              />
-            </svg>
-            <Link href="#" className="text-blue-600 hover:underline">
-              Cite this page
-            </Link>
-          </li>
-          <li className="flex items-center">
-            <svg className="w-4 h-4 mr-2" viewBox="0 0 20 20" fill="currentColor">
-              <path
-                fillRule="evenodd"
-                d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clipRule="evenodd"
-              />
-            </svg>
-            <Link href="#" className="text-blue-600 hover:underline">
-              Download PDF
-            </Link>
-          </li>
-        </ul>
+  return (
+    <aside className="md:w-64 pr-6">
+      <div className="border border-gray-200 rounded-md overflow-hidden">
+        <div className="bg-gray-100 p-2 font-medium">Contents</div>
+        <div className="p-4">{getContents(pathname)}</div>
       </div>
-    </div>
-  )
+    </aside>
+  );
 }
