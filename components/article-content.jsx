@@ -35,31 +35,6 @@ export default function ArticleContent() {
         </button>
       </div>
 
-      {/* Article Tools */}
-      <div className="flex items-center space-x-2 mb-6 overflow-x-auto pb-2">
-        <button className="p-2 bg-gray-100 rounded-md flex items-center justify-center">
-          <Eye size={16} />
-        </button>
-        <button className="p-2 bg-gray-100 rounded-md flex items-center justify-center">
-          <Edit size={16} />
-        </button>
-        <button className="p-2 bg-gray-100 rounded-md flex items-center justify-center">
-          <Clock size={16} />
-        </button>
-        <button className="p-2 bg-gray-100 rounded-md flex items-center justify-center">
-          <FileText size={16} />
-        </button>
-        <button className="p-2 bg-gray-100 rounded-md flex items-center justify-center">
-          <Bookmark size={16} />
-        </button>
-        <button className="p-2 bg-gray-100 rounded-md flex items-center justify-center">
-          <Wand2 size={16} />
-        </button>
-        <button className="p-2 bg-gray-100 rounded-md flex items-center justify-center">
-          <Printer size={16} />
-        </button>
-      </div>
-
       <div className="flex flex-col md:flex-row gap-6">
         <div className="flex-1">
           <div id="executive-summary">
@@ -84,19 +59,19 @@ export default function ArticleContent() {
             </h2>
             <p className="mb-4">
               <strong>Call of Duty 4: Modern Warfare</strong>, commonly referred to as <strong>COD4:MW</strong>, is a{" "}
-              <Link href="/game-mechanics" className="text-blue-600 hover:underline">
+              <Link href="https://en.wikipedia.org/wiki/First-person_shooter" className="text-blue-600 hover:underline">
                 first-person shooter
               </Link>{" "}
               developed by{" "}
-              <Link href="#" className="text-blue-600 hover:underline">
+              <Link href="https://www.infinityward.com/" className="text-blue-600 hover:underline">
                 Infinity Ward
               </Link>{" "}
               and published by{" "}
-              <Link href="#" className="text-blue-600 hover:underline">
+              <Link href="https://www.activision.com/" className="text-blue-600 hover:underline">
                 Activision
               </Link>
               . Released in 2007, it revolutionized the FPS genre by shifting from World War II settings to{" "}
-              <Link href="/story-outline" className="text-blue-600 hover:underline">
+              <Link href="https://en.wikipedia.org/wiki/List_of_ongoing_armed_conflicts" className="text-blue-600 hover:underline">
                 contemporary conflicts
               </Link>
               , featuring advanced{" "}
@@ -405,7 +380,7 @@ export default function ArticleContent() {
 
         <div className="md:w-72">
           <div className="border border-gray-200 rounded-md overflow-hidden mb-6">
-            <div className="bg-gray-100 p-2 font-medium text-center">Call of Duty 4: Modern Warfare</div>
+            <div className="bg-gray-200 dark:bg-gray-700 p-2 font-medium text-center">Call of Duty 4: Modern Warfare</div>
             <div className="p-4">
               <Image
                 src="/images/cod4.jpg"
@@ -454,86 +429,6 @@ export default function ArticleContent() {
                   <div>Single-player, Multiplayer</div>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div className="border border-gray-200 rounded-md overflow-hidden">
-            <div className="bg-gray-100 p-2 font-medium">Contents</div>
-            <div className="p-4">
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link
-                    href="#executive-summary"
-                    className="text-blue-600 hover:underline"
-                    onClick={(e) => handleScroll(e, "executive-summary")}
-                  >
-                    1 Executive Summary
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#gameplay"
-                    className="text-blue-600 hover:underline"
-                    onClick={(e) => handleScroll(e, "gameplay")}
-                  >
-                    2 Gameplay
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#story"
-                    className="text-blue-600 hover:underline"
-                    onClick={(e) => handleScroll(e, "story")}
-                  >
-                    3 Story
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#development"
-                    className="text-blue-600 hover:underline"
-                    onClick={(e) => handleScroll(e, "development")}
-                  >
-                    4 Development
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#reception"
-                    className="text-blue-600 hover:underline"
-                    onClick={(e) => handleScroll(e, "reception")}
-                  >
-                    5 Reception
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#awards"
-                    className="text-blue-600 hover:underline"
-                    onClick={(e) => handleScroll(e, "awards")}
-                  >
-                    6 Awards
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#references"
-                    className="text-blue-600 hover:underline"
-                    onClick={(e) => handleScroll(e, "references")}
-                  >
-                    7 References
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#external-links"
-                    className="text-blue-600 hover:underline"
-                    onClick={(e) => handleScroll(e, "external-links")}
-                  >
-                    8 External Links
-                  </Link>
-                </li>
-              </ul>
             </div>
           </div>
         </div>

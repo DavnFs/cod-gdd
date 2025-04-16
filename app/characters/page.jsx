@@ -1,6 +1,11 @@
 import { Eye, Edit, Clock, FileText, Bookmark, Wand2, Printer } from "lucide-react";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Characters - Wikigames GDD",
+  description: "Browse characters from Call of Duty 4: Modern Warfare in this Wikipedia-style Game Design Document.",
+};
+
 export default function CharactersPage() {
   return (
     <article className="max-w-4xl">
@@ -21,31 +26,6 @@ export default function CharactersPage() {
             <path d="M12 20h9"></path>
             <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
           </svg>
-        </button>
-      </div>
-
-      {/* Article Tools */}
-      <div className="flex items-center space-x-2 mb-6 overflow-x-auto pb-2">
-        <button className="p-2 bg-gray-100 rounded-md flex items-center justify-center">
-          <Eye size={16} />
-        </button>
-        <button className="p-2 bg-gray-100 rounded-md flex items-center justify-center">
-          <Edit size={16} />
-        </button>
-        <button className="p-2 bg-gray-100 rounded-md flex items-center justify-center">
-          <Clock size={16} />
-        </button>
-        <button className="p-2 bg-gray-100 rounded-md flex items-center justify-center">
-          <FileText size={16} />
-        </button>
-        <button className="p-2 bg-gray-100 rounded-md flex items-center justify-center">
-          <Bookmark size={16} />
-        </button>
-        <button className="p-2 bg-gray-100 rounded-md flex items-center justify-center">
-          <Wand2 size={16} />
-        </button>
-        <button className="p-2 bg-gray-100 rounded-md flex items-center justify-center">
-          <Printer size={16} />
         </button>
       </div>
 
@@ -117,6 +97,12 @@ export default function CharactersPage() {
                 John "Soap" MacTavish
               </Link>{" "}
               - A new SAS recruit and playable character.
+            </li>
+            <li>
+              <Link href="/characters/sergeant-jackson" className="text-blue-600 hover:underline">
+                Sergeant Paul Jackson
+              </Link>{" "}
+              - A United States Marine Corps and playable character.
             </li>
             <li>
               <Link href="/characters/khaled-al-asad" className="text-blue-600 hover:underline">

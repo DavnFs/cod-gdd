@@ -2,6 +2,11 @@ import { Eye, Edit, Clock, FileText, Bookmark, Wand2, Printer } from "lucide-rea
 import Image from "next/image";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Gameplay - Wikigames GDD",
+  description: "Explore the gameplay of Call of Duty 4: Modern Warfare in this Wikipedia-style Game Design Document.",
+};
+
 export default function GameplayPage() {
   return (
     <article className="max-w-4xl">
@@ -22,31 +27,6 @@ export default function GameplayPage() {
             <path d="M12 20h9"></path>
             <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
           </svg>
-        </button>
-      </div>
-
-      {/* Article Tools */}
-      <div className="flex items-center space-x-2 mb-6 overflow-x-auto pb-2">
-        <button className="p-2 bg-gray-100 rounded-md flex items-center justify-center">
-          <Eye size={16} />
-        </button>
-        <button className="p-2 bg-gray-100 rounded-md flex items-center justify-center">
-          <Edit size={16} />
-        </button>
-        <button className="p-2 bg-gray-100 rounded-md flex items-center justify-center">
-          <Clock size={16} />
-        </button>
-        <button className="p-2 bg-gray-100 rounded-md flex items-center justify-center">
-          <FileText size={16} />
-        </button>
-        <button className="p-2 bg-gray-100 rounded-md flex items-center justify-center">
-          <Bookmark size={16} />
-        </button>
-        <button className="p-2 bg-gray-100 rounded-md flex items-center justify-center">
-          <Wand2 size={16} />
-        </button>
-        <button className="p-2 bg-gray-100 rounded-md flex items-center justify-center">
-          <Printer size={16} />
         </button>
       </div>
 
@@ -82,7 +62,7 @@ export default function GameplayPage() {
                 Infinity Ward
               </Link>
               , the game features both a cinematic{" "}
-              <Link href="/story-outline" className="text-blue-600 hover:underline">
+              <Link href="/gameplay#single-player" className="text-blue-600 hover:underline">
                 single-player campaign
               </Link>{" "}
               and a groundbreaking{" "}
@@ -512,7 +492,7 @@ export default function GameplayPage() {
 
         <div className="md:w-72">
           <div className="border border-gray-200 rounded-md overflow-hidden mb-6">
-            <div className="bg-gray-100 p-2 font-medium text-center">Call of Duty 4: Modern Warfare</div>
+            <div className="bg-gray-200 dark:bg-gray-700 p-2 font-medium text-center">Call of Duty 4: Modern Warfare</div>
             <div className="p-4">
               <Image
                 src="/images/gameplay.jpg"
@@ -563,49 +543,6 @@ export default function GameplayPage() {
                   <div>Single-player, Multiplayer</div>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div className="border border-gray-200 rounded-md overflow-hidden">
-            <div className="bg-gray-100 p-2 font-medium">Contents</div>
-            <div className="p-4">
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link href="/gameplay#overview" className="text-blue-600 hover:underline">
-                    1 Overview
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/gameplay#single-player" className="text-blue-600 hover:underline">
-                    2 Single-Player Campaign
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/gameplay#multiplayer" className="text-blue-600 hover:underline">
-                    3 Multiplayer Mode
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/gameplay#weapons" className="text-blue-600 hover:underline">
-                    4 Weapons
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/gameplay#factions" className="text-blue-600 hover:underline">
-                    5 Factions
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/gameplay#killstreaks-perks" className="text-blue-600 hover:underline">
-                    6 Killstreaks and Perks
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/gameplay#game-mechanics" className="text-blue-600 hover:underline">
-                    7 Game Mechanics
-                  </Link>
-                </li>
-              </ul>
             </div>
           </div>
         </div>

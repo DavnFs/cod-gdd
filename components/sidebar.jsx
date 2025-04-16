@@ -70,22 +70,12 @@ const getContents = (pathname) => {
           </Link>
         </li>
         <li>
-        <Link href="/soundtrack" className="text-blue-600 hover:underline">
-            7 soundtrack
-          </Link>
-        </li>
-        <li>
-        <Link href="/characters" className="text-blue-600 hover:underline">
-            8 character
-          </Link>
-        </li>
-        <li>
           <Link
             href="/#references"
             className="text-blue-600 hover:underline"
             onClick={(e) => handleScroll(e, "references")}
           >
-            9 References
+            7 References
           </Link>
         </li>
         <li>
@@ -94,7 +84,7 @@ const getContents = (pathname) => {
             className="text-blue-600 hover:underline"
             onClick={(e) => handleScroll(e, "external-links")}
           >
-            10 External Links
+            8 External Links
           </Link>
         </li>
       </ul>
@@ -233,16 +223,16 @@ const getContents = (pathname) => {
         </li>
         <li>
           <Link
-            href="/characters/khaled-al-asad#khaled-al-asad"
+            href="/characters/sergeant-jackson#sergeant-jackson"
             className="text-blue-600 hover:underline"
-            onClick={(e) => handleScroll(e, "khaled-al-asad")}
+            onClick={(e) => handleScroll(e, "sergeant-jackson")}
           >
-            4 Khaled Al-Asad
+            4 Sergeant Paul Jackson
           </Link>
           <ul className="ml-4 space-y-1 text-sm">
             <li>
               <Link
-                href="/characters/khaled-al-asad#character-details"
+                href="/characters/sergeant-jackson#character-details"
                 className="text-blue-600 hover:underline"
                 onClick={(e) => handleScroll(e, "character-details")}
               >
@@ -251,7 +241,7 @@ const getContents = (pathname) => {
             </li>
             <li>
               <Link
-                href="/characters/khaled-al-asad#biography"
+                href="/characters/sergeant-jackson#biography"
                 className="text-blue-600 hover:underline"
                 onClick={(e) => handleScroll(e, "biography")}
               >
@@ -262,16 +252,16 @@ const getContents = (pathname) => {
         </li>
         <li>
           <Link
-            href="/characters/victor-zakhaev#victor-zakhaev"
+            href="/characters/khaled-al-asad#khaled-al-asad"
             className="text-blue-600 hover:underline"
-            onClick={(e) => handleScroll(e, "victor-zakhaev")}
+            onClick={(e) => handleScroll(e, "khaled-al-asad")}
           >
-            5 Victor Zakhaev
+            5 Khaled Al-Asad
           </Link>
           <ul className="ml-4 space-y-1 text-sm">
             <li>
               <Link
-                href="/characters/victor-zakhaev#character-details"
+                href="/characters/khaled-al-asad#character-details"
                 className="text-blue-600 hover:underline"
                 onClick={(e) => handleScroll(e, "character-details")}
               >
@@ -280,11 +270,40 @@ const getContents = (pathname) => {
             </li>
             <li>
               <Link
-                href="/characters/victor-zakhaev#biography"
+                href="/characters/khaled-al-asad#biography"
                 className="text-blue-600 hover:underline"
                 onClick={(e) => handleScroll(e, "biography")}
               >
                 5.2 Biography
+              </Link>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <Link
+            href="/characters/victor-zakhaev#victor-zakhaev"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "victor-zakhaev")}
+          >
+            6 Victor Zakhaev
+          </Link>
+          <ul className="ml-4 space-y-1 text-sm">
+            <li>
+              <Link
+                href="/characters/victor-zakhaev#character-details"
+                className="text-blue-600 hover:underline"
+                onClick={(e) => handleScroll(e, "character-details")}
+              >
+                1.1 Character Details
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/characters/victor-zakhaev#biography"
+                className="text-blue-600 hover:underline"
+                onClick={(e) => handleScroll(e, "biography")}
+              >
+                1.2 Biography
               </Link>
             </li>
           </ul>
@@ -326,6 +345,30 @@ const getContents = (pathname) => {
             3 Multiplayer Mode
           </Link>
         </li>
+        <li>
+          <Link
+            href="/gameplay#weapons"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "weapons")}
+          >
+            4 Weapons
+          </Link>
+        </li>
+        <li>
+          <Link href="/gameplay#factions" className="text-blue-600 hover:underline" onClick={(e) => handleScroll(e, "factions")}>
+            5 Factions
+          </Link> 
+        </li>
+        <li>
+          <Link href="/gameplay#killstreaks-perks" className="text-blue-600 hover:underline" onClick={(e) => handleScroll(e, "killstreaks-perks")}>
+            6 Killstreaks and Perks
+          </Link>
+        </li>
+        <li>
+          <Link href="/gameplay#game-mechanics" className="text-blue-600 hover:underline" onClick={(e) => handleScroll(e, "game-mechanics")}>
+            7 Game Mechanics
+          </Link>
+        </li>
       </ul>
     );
   } else if (pathname === "/story-outline") {
@@ -361,6 +404,180 @@ const getContents = (pathname) => {
             onClick={(e) => handleScroll(e, "themes")}
           >
             3 Themes
+          </Link>
+        </li>
+      </ul>
+    );
+  } else if (pathname === "/game-mechanics") {
+    return (
+      <ul className="space-y-2 text-sm">
+        <li>
+          <Link href="/" className="text-blue-600 hover:underline">
+            ← Back to Main Page
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/game-mechanics#introduction"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "introduction")}
+          >
+            1 Introduction
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/game-mechanics#core-gameplay"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "core-gameplay")}
+          >
+            2 Core Gameplay
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/game-mechanics#multiplayer-features"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "multiplayer-features")}
+          >
+            3 Multiplayer Features
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/game-mechanics#single-player-campaign"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "single-player-campaign")}
+          >
+            4 Single-Player Campaign
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/game-mechanics#communication"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "communication")}
+          >
+            5 Communication and Teamwork
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/game-mechanics#conclusion"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "conclusion")}
+          >
+            6 Conclusion
+          </Link>
+        </li>
+      </ul>
+    );
+  } else if (pathname === "/level-design") {
+    return (
+      <ul className="space-y-2 text-sm">
+        <li>
+          <Link href="/" className="text-blue-600 hover:underline">
+            ← Back to Main Page
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/level-design#introduction"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "introduction")}
+          >
+            1 Introduction
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/level-design#single-player-mission-design"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "single-player-mission-design")}
+          >
+            2 Single-Player Mission Design
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/level-design#multiplayer-map-design"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "multiplayer-map-design")}
+          >
+            3 Multiplayer Map Design
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/level-design#environmental-storytelling"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "environmental-storytelling")}
+          >
+            4 Environmental Storytelling
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/level-design#conclusion"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "conclusion")}
+          >
+            5 Conclusion
+          </Link>
+        </li>
+      </ul>
+    );
+  } else if (pathname === "/story-at-level") {
+    return (
+      <ul className="space-y-2 text-sm">
+        <li>
+          <Link href="/" className="text-blue-600 hover:underline">
+            ← Back to Main Page
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/story-at-level#introduction"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "introduction")}
+          >
+            1 Introduction
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/story-at-level#act-1"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "act-1")}
+          >
+            2 Act 1: Middle Eastern Conflict
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/story-at-level#act-2"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "act-2")}
+          >
+            3 Act 2: Pursuit and Revelation
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/story-at-level#act-3"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "act-3")}
+          >
+            4 Act 3: Climactic Showdown
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/story-at-level#conclusion"
+            className="text-blue-600 hover:underline"
+            onClick={(e) => handleScroll(e, "conclusion")}
+          >
+            5 Conclusion
           </Link>
         </li>
       </ul>
@@ -419,9 +636,11 @@ export default function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="md:w-64 pr-6">
-      <div className="border border-gray-200 rounded-md overflow-hidden">
-        <div className="bg-gray-100 p-2 font-medium">Contents</div>
+    <aside className="md:w-64 pl-3 pr-3 md:sticky md:top-0 md:h-screen md:overflow-y-auto">
+      <div className="border border-gray-400 dark:border-gray-700 rounded-md overflow-hidden">
+        <div className="bg-gray-200 dark:bg-gray-700 p-4 font-medium text-gray-900 dark:text-gray-100">
+          Contents
+        </div>
         <div className="p-4">{getContents(pathname)}</div>
       </div>
     </aside>

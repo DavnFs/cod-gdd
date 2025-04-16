@@ -12,31 +12,6 @@ export default function SoundtrackPage() {
         </button>
       </div>
 
-      {/* Article Tools */}
-      <div className="flex items-center space-x-2 mb-6 overflow-x-auto pb-2">
-        <button className="p-2 bg-gray-100 rounded-md flex items-center justify-center">
-          <Eye size={16} />
-        </button>
-        <button className="p-2 bg-gray-100 rounded-md flex items-center justify-center">
-          <Edit size={16} />
-        </button>
-        <button className="p-2 bg-gray-100 rounded-md flex items-center justify-center">
-          <Clock size={16} />
-        </button>
-        <button className="p-2 bg-gray-100 rounded-md flex items-center justify-center">
-          <FileText size={16} />
-        </button>
-        <button className="p-2 bg-gray-100 rounded-md flex items-center justify-center">
-          <Bookmark size={16} />
-        </button>
-        <button className="p-2 bg-gray-100 rounded-md flex items-center justify-center">
-          <Wand2 size={16} />
-        </button>
-        <button className="p-2 bg-gray-100 rounded-md flex items-center justify-center">
-          <Printer size={16} />
-        </button>
-      </div>
-
       <div className="flex flex-col md:flex-row gap-6">
         <div className="flex-1">
           <div id="overview">
@@ -119,10 +94,10 @@ export default function SoundtrackPage() {
 
         <div className="md:w-72">
           <div className="border border-gray-200 rounded-md overflow-hidden mb-6">
-            <div className="bg-gray-100 p-2 font-medium text-center">Call of Duty 4: Modern Warfare</div>
+            <div className="bg-gray-200 dark:bg-gray-700 p-2 font-medium text-center">Call of Duty 4: Modern Warfare</div>
             <div className="p-4">
               <Image
-                src="/images/cod4-soundtrack.jpg"
+                src="/images/soundtrack.jpg"
                 alt="Call of Duty 4: Modern Warfare Soundtrack Cover"
                 width={240}
                 height={200}
@@ -170,34 +145,6 @@ export default function SoundtrackPage() {
                   <div>Single-player, Multiplayer</div>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div className="border border-gray-200 rounded-md overflow-hidden">
-            <div className="bg-gray-100 p-2 font-medium">Contents</div>
-            <div className="p-4">
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link href="#overview" className="text-blue-600 hover:underline">
-                    1 Overview
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#composers" className="text-blue-600 hover:underline">
-                    2 Composers
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#track-list" className="text-blue-600 hover:underline">
-                    3 Track List
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#sound-effects" className="text-blue-600 hover:underline">
-                    4 Sound Effects
-                  </Link>
-                </li>
-              </ul>
             </div>
           </div>
         </div>
