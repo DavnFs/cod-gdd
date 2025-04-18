@@ -77,8 +77,8 @@ export default function RootLayout({ children }) {
       { path: "/level-design", name: "level design" },
       { path: "/game-mechanics", name: "game mechanics" },
       { path: "/game-mechanics", name: "mekanik game" },
-      { path: "/story-at-level", name: "cerita pada level"},
-      { path: "/story-at-level", name: "story at level"},
+      { path: "/story-at-level", name: "cerita pada level" },
+      { path: "/story-at-level", name: "story at level" },
     ];
 
     // Find the first matching route
@@ -100,13 +100,13 @@ export default function RootLayout({ children }) {
 
   const getLinkClassName = (path) => {
     // Check if the current path is either exactly this path or a subpath for characters
-    const isActive = pathname === path || 
+    const isActive =
+      pathname === path ||
       (path === "/characters" && pathname.startsWith("/characters/"));
     return isActive
       ? "px-4 py-2 border-b-2 border-blue-500 dark:border-blue-400 font-medium text-blue-500 dark:text-blue-400"
       : "px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700";
   };
-
 
   return (
     <html lang="en" className={inter.className}>
@@ -118,20 +118,42 @@ export default function RootLayout({ children }) {
               <div className="flex items-center">
                 <div className="lg:hidden">
                   {isSidebarOpen ? (
-                    <button onClick={toggleSidebar} className="text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300">
+                    <button
+                      onClick={toggleSidebar}
+                      className="text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300"
+                    >
                       <X size={24} />
                     </button>
                   ) : (
-                    <button onClick={toggleSidebar} className="text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300">
+                    <button
+                      onClick={toggleSidebar}
+                      className="text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300"
+                    >
                       <span className="sr-only">Open sidebar</span>
-                      <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                      <svg
+                        className="h-6 w-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M4 6h16M4 12h16M4 18h16"
+                        />
                       </svg>
                     </button>
                   )}
                 </div>
                 <Link href="/" className="flex-shrink-0 flex items-center mx-2 lg:mx-0">
-                  <span className="text-xl font-bold">Wiki Games</span>
+                  <img
+                    src="/images/gamepedia.png"
+                    alt="Game Pedia Logo"
+                    className="h-8 w-8 mr-2"
+                  />
+                  <span className="text-xl font-bold">GamePedia</span>
                 </Link>
               </div>
 
@@ -147,7 +169,10 @@ export default function RootLayout({ children }) {
                       onKeyPress={(e) => e.key === "Enter" && handleSearch(e)}
                       className="w-full py-1 px-3 border border-gray-300 dark:border-gray-600 rounded-md text-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500"
                     />
-                    <button type="submit" className="absolute inset-y-0 right-0 pr-3 flex items-center">
+                    <button
+                      type="submit"
+                      className="absolute inset-y-0 right-0 pr-3 flex items-center"
+                    >
                       <Search size={18} className="text-gray-400" />
                     </button>
                   </div>
@@ -160,11 +185,7 @@ export default function RootLayout({ children }) {
                   onClick={toggleTheme}
                   className="p-2 rounded-md text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700"
                 >
-                  {theme === "dark" ? (
-                    <Sun size={20} />
-                  ) : (
-                    <Moon size={20} />
-                  )}
+                  {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
                 </button>
               </div>
             </div>
@@ -180,22 +201,40 @@ export default function RootLayout({ children }) {
                 <Link href="/gameplay" className={getLinkClassName("/gameplay")}>
                   Gameplay
                 </Link>
-                <Link href="/story-outline" className={getLinkClassName("/story-outline")}>
+                <Link
+                  href="/story-outline"
+                  className={getLinkClassName("/story-outline")}
+                >
                   Story Outline
                 </Link>
-                <Link href="/game-mechanics" className={getLinkClassName("/game-mechanics")}>
+                <Link
+                  href="/game-mechanics"
+                  className={getLinkClassName("/game-mechanics")}
+                >
                   Game Mechanic
                 </Link>
-                <Link href="/characters" className={getLinkClassName("/characters")}>
+                <Link
+                  href="/characters"
+                  className={getLinkClassName("/characters")}
+                >
                   Characters
                 </Link>
-                <Link href="/soundtrack" className={getLinkClassName("/soundtrack")}>
+                <Link
+                  href="/soundtrack"
+                  className={getLinkClassName("/soundtrack")}
+                >
                   Soundtrack
                 </Link>
-                <Link href="/level-design" className={getLinkClassName("/level-design")}>
+                <Link
+                  href="/level-design"
+                  className={getLinkClassName("/level-design")}
+                >
                   Level Design
                 </Link>
-                <Link href="/story-at-level" className={getLinkClassName("/story-at-level")}>
+                <Link
+                  href="/story-at-level"
+                  className={getLinkClassName("/story-at-level")}
+                >
                   Story on Level
                 </Link>
               </nav>
@@ -206,24 +245,24 @@ export default function RootLayout({ children }) {
         {/* Main Content */}
         <div className="container mx-auto px-4 py-4 flex">
           {/* Sidebar - Hidden on mobile, shown when toggled */}
-          <div className={`fixed inset-y-0 left-0 z-50 w-64 bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-700 transform ${
-            isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-          } lg:translate-x-0 lg:static lg:w-64 transition-transform duration-300 ease-in-out`}>
+          <div
+            className={`fixed inset-y-0 left-0 z-50 w-64 bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-700 transform ${
+              isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+            } lg:translate-x-0 lg:static lg:w-64 transition-transform duration-300 ease-in-out`}
+          >
             <Sidebar />
           </div>
 
           {/* Overlay for mobile sidebar */}
           {isSidebarOpen && (
-            <div 
-              className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden" 
+            <div
+              className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
               onClick={toggleSidebar}
             />
           )}
 
           {/* Page Content */}
-          <div className="flex-1 lg:ml-4">
-            {children}
-          </div>
+          <div className="flex-1 lg:ml-4">{children}</div>
         </div>
         <Analytics />
       </body>
