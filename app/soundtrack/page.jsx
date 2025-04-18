@@ -2,6 +2,11 @@ import { Eye, Edit, Clock, FileText, Bookmark, Wand2, Printer } from "lucide-rea
 import Image from "next/image";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Level Design - GamePedia",
+  description: "Explore the level design of Call of Duty 4: Modern Warfare in this Wikipedia-style Game Design Document.",
+};
+
 export default function SoundtrackPage() {
   return (
     <article className="max-w-4xl">

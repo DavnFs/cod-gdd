@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Level Design - Wikigames GDD",
+  title: "Level Design - GamePedia",
   description: "Explore the level design of Call of Duty 4: Modern Warfare in this Wikipedia-style Game Design Document.",
 };
 

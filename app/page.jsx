@@ -1,7 +1,7 @@
 import ArticleContent from "@/components/article-content";
 
 export const metadata = {
-  title: "Wikigames GDD",
+  title: "GamePedia",
   description: "A Wikipedia-style Game Design Document",
   generator: "v0.dev",
 };

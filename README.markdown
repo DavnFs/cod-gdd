@@ -1,8 +1,8 @@
-# Wiki Games: Call of Duty 4: Modern Warfare GDD
+# GamePedia: Call of Duty 4: Modern Warfare GDD
 
 ## Overview
 
-Wiki Games is a Wikipedia-style Game Design Document (GDD) for *Call of Duty 4: Modern Warfare*, built using Next.js and Tailwind CSS. The project aims to provide a comprehensive resource for the game’s design, including its mechanics, level design, story, and characters. The app features a clean, responsive UI with dark mode support, smooth scrolling navigation, and a dynamic sidebar for easy access to content sections.
+GamePedia is a Wikipedia-style Game Design Document (GDD) for *Call of Duty 4: Modern Warfare*, built using Next.js and Tailwind CSS. The project aims to provide a comprehensive resource for the game’s design, including its mechanics, level design, story, and characters. The app features a clean, responsive UI with dark mode support, smooth scrolling navigation, and a dynamic sidebar for easy access to content sections.
 
 ### Features
 - **Game Overview**: Detailed summary of *Call of Duty 4: Modern Warfare*, including gameplay, story, and development history (`app/page.jsx`).
@@ -23,8 +23,8 @@ Wiki Games is a Wikipedia-style Game Design Document (GDD) for *Call of Duty 4: 
 ### Steps
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/your-username/wiki-games-cod4.git
-   cd wiki-games-cod4
+   git clone https://github.com/DavnFs/cod-gdd
+   cd cod-gdd
    ```
 
 2. **Install Dependencies**

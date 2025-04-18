@@ -110,6 +110,12 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en" className={inter.className}>
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      </head>
       <body className="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen">
         {/* Header */}
         <header className="w-full border-b bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
@@ -246,9 +252,8 @@ export default function RootLayout({ children }) {
         <div className="container mx-auto px-4 py-4 flex">
           {/* Sidebar - Hidden on mobile, shown when toggled */}
           <div
-            className={`fixed inset-y-0 left-0 z-50 w-64 bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-700 transform ${
-              isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-            } lg:translate-x-0 lg:static lg:w-64 transition-transform duration-300 ease-in-out`}
+            className={`fixed inset-y-0 left-0 z-50 w-64 bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-700 transform ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+              } lg:translate-x-0 lg:static lg:w-64 transition-transform duration-300 ease-in-out`}
           >
             <Sidebar />
           </div>
