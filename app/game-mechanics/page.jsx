@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Game Mechanics - GamePedia",
+  title: "Game Mechanics - GameplayPedia",
   description: "Explore the game mechanics of Call of Duty 4: Modern Warfare in this Wikipedia-style Game Design Document.",
 };
 

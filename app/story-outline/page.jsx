@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Story Outline - GamePedia",
+  title: "Story Outline - GameplayPedia",
   description: "Explore the story outline of Call of Duty 4: Modern Warfare in this Wikipedia-style Game Design Document.",
 };
 

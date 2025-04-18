@@ -159,7 +159,7 @@ export default function RootLayout({ children }) {
                     alt="Game Pedia Logo"
                     className="h-8 w-8 mr-2"
                   />
-                  <span className="text-xl font-bold">GamePedia</span>
+                  <span className="text-xl font-bold">GameplayPedia</span>
                 </Link>
               </div>
 

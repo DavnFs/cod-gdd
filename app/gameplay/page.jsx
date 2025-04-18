@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Gameplay - GamePedia",
+  title: "Gameplay - GameplayPedia",
   description: "Explore the gameplay of Call of Duty 4: Modern Warfare in this Wikipedia-style Game Design Document.",
 };
 

@@ -2,7 +2,7 @@ import { Eye, Edit, Clock, FileText, Bookmark, Wand2, Printer } from "lucide-rea
 import Link from "next/link";
 
 export const metadata = {
-  title: "Characters - GamePedia",
+  title: "Characters - GameplayPedia",
   description: "Browse characters from Call of Duty 4: Modern Warfare in this Wikipedia-style Game Design Document.",
 };
 
